@@ -1,0 +1,18 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="12.688" viewBox="0 0 64 58" aria-hidden="true">
+  <defs>
+    <style>
+      .logo-path-1{fill:#2684ff;}
+      .logo-path-2{fill:url(#logo-gradient);}
+    </style>
+    <linearGradient id="logo-gradient" x1="64.79" y1="22.195" x2="33.77" y2="46.415" gradientUnits="userSpaceOnUse">
+      <stop offset="0.18" stop-color="#0052cc"/>
+      <stop offset="1" stop-color="#2684ff"/>
+    </linearGradient>
+  </defs>
+
+  <title>Bitbucket logo</title>
+  <g>
+    <path class="logo-path-1" d="m2.805,0.93a2,2 0 0 0 -2,2.32l8.49,51.54a2.72,2.72 0 0 0 2.66,2.27l40.73,0a2,2 0 0 0 2,-1.68l8.51,-52.11a2,2 0 0 0 -2,-2.32l-58.39,-0.02zm35.75,37.25l-13,0l-3.52,-18.38l19.67,0l-3.15,18.38z"/>
+    <path class="logo-path-2" d="m60.475,19.8l-18.77,0l-3.15,18.38l-13,0l-15.35,18.23a2.71,2.71 0 0 0 1.75,0.66l40.74,0a2,2 0 0 0 2,-1.68l5.78,-35.59z"/>
+  </g>
+</svg>
