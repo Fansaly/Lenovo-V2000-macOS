@@ -1,4 +1,4 @@
-[小黑](http://www.lenovo.com.cn/product/50081.html "LENOVO 小新 V2000 Bigger 版") | 设备
+[小黑](http://www.lenovo.com.cn/product/50081.html "LENOVO 小新 V2000 Bigger 版") | 型号
 :-: | -
 主板 | Lenovo Lancer 5A5 `BIOS Version: 9BCN29WW`
 主板芯片组 | Intel Lynx Point-LP `南桥`, Intel Haswell `北桥`
@@ -21,7 +21,7 @@ CPU | Intel(R) Core(TM) i7-4510U CPU @ 2.00GHz `可睿频至 3.1GHz`
 恢复 BIOS 到默认状态后，再设置：
 - UEFI Boot: Enabled
 - Secure Boot: Disabled
-- 启用 Legacy Boot (but UEFI first)，这样在启动时可以有效地减少“花屏”
+- Legacy Boot (but UEFI first) (这样在启动时可以有效地减少“花屏”)
 
 提醒：可保持独立显卡在 BIOS 中的启用状态。它将会在运行 macOS 时，被 Hotpatch 编译的 AML 自动禁用。
 
@@ -29,21 +29,21 @@ CPU | Intel(R) Core(TM) i7-4510U CPU @ 2.00GHz `可睿频至 3.1GHz`
 1. 打开 `Disk Utility` 将 U盘 抹成 **GUID** 分区方案下的 **APFS** 或 **Mac OS 扩展(日志式)** 分区格式。
 > 参考 [![apple logo](logos/apple.svg)](#) [如何抹掉 Mac 磁盘](https://support.apple.com/zh-cn/HT208496)
 2. 使用下面的 `createinstallmedia` 命令创建用于引导安装 macOS 的 U盘。其中 `USB_Volume` 为你的 U盘 卷名。
-> 参考 [![apple logo](logos/apple.svg)](#) [如何创建可引导的 macOS 安装器](https://support.apple.com/zh-cn/HT201372)
 ```sh
 sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/USB_Volume
 ```
+> 参考 [![apple logo](logos/apple.svg)](#) [如何创建可引导的 macOS 安装器](https://support.apple.com/zh-cn/HT201372)
 3. 安装 CloverBootloader 到 U盘，可从 [![Github logo](logos/github.svg)](#) [CloverBootloader](https://github.com/CloverHackyColor/CloverBootloader/releases) 下载最新版本的 CloverBootloader。
 4. 将 `RealtekRTL8111.kext` 复制到 U盘 `EFI/CLOVER/kexts/Other`，作为必要的网络支持。
-> `RealtekRTL8111.kext` 可从 [![Bitbucket logo](logos/bitbucket.svg)](#) [os-x-realtek-network](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/) 下载获得
+> `RealtekRTL8111.kext` 可从 [![Bitbucket logo](logos/bitbucket.svg)](#) [OS-X-Realtek-Network](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/) 下载获得
 5. 将 `ApplePS2SmartTouchPad.kext` 复制到 U盘 `EFI/CLOVER/kexts/Other`，以驱动键盘和 ELAN 触控板。
 > `ApplePS2SmartTouchPad.kext` 位于本仓库的 `Kexts` 目录中
 6. 使用本仓库中的 `config.install.plist` 作为安装 macOS 时，U盘 的 `EFI/CLOVER/config.plist`。
 
 ### 完成安装后
-继使用 U盘 的 Clover 引导进入刚安装的 macOS 之后，  
-同样再次安装 CloverBootloader 到本地硬盘。  
-紧接着，依照以下步骤，来完善 macOS：
+使用 U盘 的 Clover 引导进入刚安装好的 macOS，  
+同样，再次安装 CloverBootloader 到笔记本硬盘。  
+接着，依照以下步骤，来完善 macOS。
 
 0. 接入网线，打开 Terminal，安装开发者工具：
 ```sh
