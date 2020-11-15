@@ -100,7 +100,7 @@ make update-repo        # 更新本地项目
     - **ApfsDriverLoader.efi**
     - **VBoxHfs.efi**
   - Memory fix
-    - **AptioMemoryFix.efi**
+    - **OpenRuntime.efi**
   - Custom
     - **VirtualSmc.efi** `由 make install-drivers 安装（无需额外操作）`
 
